@@ -6,32 +6,44 @@
     <title>Desafio Decodificador</title>
     <link rel="stylesheet" href="./style.css" class="style" />
   </head>
-  <body class="painel__principal">
+  <body>
     <header class="logo__alura">
       <img logo__alura__Imagem src="./assets/frame.svg" alt="logo da alura" />
     </header>
-    <main >
-      <section class="decodificador">
-        <div class="decodificador__section">
-          <p class="decodificador__texto">Digite seu texto</p>
-        </div>
-        <div class="painel">
-          <img src="assets/high_quality_products.svg" alt="" class="painel__imagem" />
-          <div class="painel__textos">
-            <p class="painel__texto__titulo">Nenhuma mensagem encontrada</p>
-            <p class="painel__texto__paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
-          </div>
-        </div>
-      </section>  
-      <section class="botao">
-        <div class="icone__mensagem">
-          <img class="imagem_icon" src="./assets/bi_exclamation-circle-fill.svg" alt="">
+    <main>
+      <section class="input_area">
+        <textarea
+          name="input-text"
+          class="input-text"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <div class="main_alert_span">
+          <img
+            src="./assets/bi_exclamation-circle-fill.svg"
+            alt="exclamation"
+          />
           <span>Apenas letras minúsculas e sem acento.</span>
         </div>
-        <div class="botao__ancora">
-          <button class="botao__criptografar">Criptografar</button>
-          <button class="botao__descriptografar">Descriptografar</button>
+        <div class="main__div__button">
+          <button class="button" id="btn-codificar" onclick="">
+            Criptografar
+          </button>
+          <button class="button" id="btn-decodificar" onclick="">
+            Descriptografar
+          </button>
         </div>
+      </section>
+      <section class="main__container__message">
+        <img src="./assets/high_quality_products.svg" alt="no-message-img" />
+        <div class="area_msg">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p class="texto_message">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+        <!-- <button class="light-button btn_copiar" id="btn-copiar" onclick="">
+          Copiar
+        </button> -->
       </section>
     </main>
   </body>
