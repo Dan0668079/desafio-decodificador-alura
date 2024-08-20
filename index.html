@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desafio Decodificador</title>
-    <link rel="stylesheet" href="./style.css" class="style" />
-  </head>
-  <body>
-    <header class="logo__alura">
-      <img logo__alura__Imagem src="./assets/frame.svg" alt="logo da alura" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="logoAlura" src="./assets/frame.svg" alt="Logo da Alura">
     </header>
-    <main>
-      <section class="input_area">
-        <textarea
-          name="input-text"
-          class="input-text"
-          placeholder="Digite seu texto"
-        ></textarea>
-        <div class="main_alert_span">
-          <img
-            src="./assets/bi_exclamation-circle-fill.svg"
-            alt="exclamation"
-          />
-          <span>Apenas letras minúsculas e sem acento.</span>
-        </div>
-        <div class="main__div__button">
-          <button class="button" id="btn-codificar" onclick="">
-            Criptografar
-          </button>
-          <button class="button" id="btn-decodificar" onclick="">
-            Descriptografar
-          </button>
-        </div>
-      </section>
-      <section class="main__container__message">
-        <img src="./assets/high_quality_products.svg" alt="no-message-img" />
-        <div class="area_msg">
-          <h2>Nenhuma mensagem encontrada</h2>
-          <p class="texto_message">
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
-        </div>
-        <!-- <button class="light-button btn_copiar" id="btn-copiar" onclick="">
-          Copiar
-        </button> -->
-      </section>
+    <main class="conteudo">
+        <section class="esquerda">
+            <div class="secao mensagem">
+                <textarea class="mensagem__texto" cols="41" rows="4" maxlength="300" placeholder="Digite seu texto"></textarea>
+
+                <div class="mensagem__informacao">
+                    <img src="./assets/bi_exclamation-circle-fill.svg" alt="símbolo de exclamação">
+                    <span>Apenas letras minúsculas e sem acento.</span>
+                </div>
+
+                <div class="conteudo__botao">
+                    <button onclick="btnEncriptar()" class="btn estilo-um">Criptografar</button>
+                    <button onclick="btnDesencriptar()" class="btn estilo-dois">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="direita">
+            <div class="secao resposta">
+                <textarea class="resposta__texto escondido" cols="20" rows="9" readonly></textarea>
+                <img src="./assets/high_quality_products.svg" alt="imagem de um personagem segurando uma lupa" class="resultado_img visivel">
+                <p class="resposta__alerta visivel">Nenhuma mensagem encontrada</p>
+                <p class="resposta__subtexto visivel">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                
+                <div class="conteudo__botao escondido" id="btn-copiar">
+                    <button onclick="btnCopiar()" class="btn estilo-dois">Copiar</button>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
+    <script src=""></script>
+</body>
+<footer class="rodape">
+    <p>Challenge ONE Decodificador de texto</p>
+</footer>
 </html>
