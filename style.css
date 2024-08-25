@@ -10,13 +10,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --cor-primaria: #1c1678; /* Cor usada em vários elementos */
+  --cor-secundaria: #a3ffd6; /* Cor de fundo do cabeçalho e outras seções */
+  --cor-hover-botao: #8576ff;
+  --cor-botao-dois: #7bc9ff;
+}
+
 ::placeholder {
-  color: #1c1678;
+  color: var(--cor-primaria);
 }
 
 /* Cabeçalho */
 .cabecalho {
-  background-color: #a3ffd6;
+  background-color: var(--cor-secundaria);
   display: flex;
   padding: 0.625rem 1.25rem;
   position: fixed;
@@ -43,7 +50,7 @@
 /* Seções esquerda e direita */
 .esquerda,
 .direita {
-  background-color: #a3ffd6;
+  background-color: var(--cor-secundaria);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -67,7 +74,7 @@
 
 /* Mensagem */
 .mensagem {
-  background-color: #a3ffd6;
+  background-color: var(--cor-secundaria);
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -81,8 +88,8 @@
 }
 
 .mensagem__texto {
-  background-color: #a3ffd6;
-  color: #1c1678;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
   border: none;
   font-size: 2rem;
   text-transform: lowercase;
@@ -106,7 +113,7 @@
 /* Resposta */
 .resposta {
   background-color: white;
-  border: 1px solid #1c1678;
+  border: 1px solid var(--cor-primaria);
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -123,7 +130,7 @@
 }
 
 .resposta__texto {
-  color: #1c1678;
+  color: var(--cor-primaria);
   font-size: 1.5rem;
   resize: none;
   width: 100%;
@@ -166,25 +173,26 @@
 }
 
 .estilo-um {
-  background-color: #1c1678;
-  border: 1px solid #1c1678;
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
   color: white;
 }
 
-.estilo-um:hover {
-  background-color: #8576ff;
+.estilo-um {
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+}
+
+.estilo-um:hover,
+.estilo-dois:hover {
+  background-color: var(--cor-hover-botao);
 }
 
 .estilo-dois {
-  background-color: #7bc9ff;
-  border: 1px solid #1c1678;
-  color: #1c1678;
+  background-color: var(--cor-botao-dois);
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-primaria);
 }
-
-.estilo-dois:hover {
-  background-color: #8576ff;
-}
-
 /* Controla a visibilidade dos itens */
 .visivel {
   display: block;
@@ -196,7 +204,7 @@
 
 /* Rodapé */
 .rodape {
-  background-color: #a3ffd6;
+  background-color: var(--cor-secundaria);
   color: black;
   text-align: center;
   padding: 0.75rem;
@@ -204,7 +212,7 @@
   bottom: 0;
   width: 100%;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-  border-top: 1px solid #1c1678;
+  border-top: 1px solid var(--cor-primaria);
   font-size: 0.875rem;
 }
 
